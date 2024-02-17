@@ -9,6 +9,6 @@ article{
     padding: 20px; /* Space inside the card */
     margin: 20px 0; /* Space outside the card */
 
-        /* Layout */
-        max-width: 300px; /* Maximum card width */
+    /* Layout */
+    max-width: 300px; /* Maximum card width */
 }
