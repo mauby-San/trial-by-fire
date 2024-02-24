@@ -55,6 +55,28 @@
     </div>
   </div>
 
+  <script>
+        
+    // Function to handle form submission
+    document.getElementById('new-entry-form').addEventListener('submit', function(newEntry) {
+    newEntry.preventDefault(); // Prevent form submission
+
+    // Get user input values
+    var date = document.getElementById('date').value;
+    var content = document.getElementById('entry').value;
+
+    // Create a new article element
+    var entry = document.createElement('entry');
+    entry.innerHTML = '<h2 class="date">' + date + '</h2><p>' + content + '</p>';
+
+    // Add the new article to the blog section
+    document.getElementById('new-entry').appendChild(entry);
+
+    // Clear form fields
+    document.getElementById('new-entry-form').reset();
+});
+</script>
+
 </body>
 </html>
   
