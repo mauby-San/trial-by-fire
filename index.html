@@ -8,12 +8,13 @@
 
 <body style="background-color:powderblue;">
 
- <h1> 
+   <h1> 
     Desserts world
- </h1>
+   </h1>
 
- <p style="font-size: large; font-weight: bold;"> 
-    Cookies, Cookies,Cookies,Cookies! </p> 
+   <p style="font-size: large; font-weight: bold;"> 
+    Cookies, Cookies,Cookies,Cookies! 
+   </p> 
 
   <div>
      <aside>
@@ -23,7 +24,7 @@
 
  <h2>Cookie Facts</h2>
 
- <article style="background-color: rgb(240, 218, 122)">
+  <article style="background-color: rgb(240, 218, 122)">
      <h2 style="color: rgb(5, 4, 0)">Cookies are Important to Humanity!</h2>
      <ol>
        <li>Reason 1: Tastes great</li>
@@ -45,37 +46,37 @@
  </article>
 
   <section>
-    <form id="new-entry-form">
-        <label for="date">name:</label>
-        <input type="text" name="date" id="date">
+       <form id="new-entry-form">
+           <label for="date">name:</label>
+           <input type="text" name="date" id="date">
 
-        <label for="entry">Whats your favorite?</label>
-        <input type="text" name="entry" id="entry">
+           <label for="entry">Whats your favorite?</label>
+           <input type="text" name="entry" id="entry">
 
-        <input type="submit" name="submit">
-    </form>
+           <input type="submit" name="submit">
+       </form>
  </section>
 
  <script>
         
-    // Function to handle form submission
-    document.getElementById('new-entry-form').addEventListener('submit', function(newEntry) {
-    newEntry.preventDefault(); // Prevent form submission
+      // Function to handle form submission
+      document.getElementById('new-entry-form').addEventListener('submit', function(newEntry) {
+      newEntry.preventDefault(); // Prevent form submission
 
-    // Get user input values
-    var name = document.getElementById('date').value;
-    var content = document.getElementById('entry').value;
+      // Get user input values
+      var name = document.getElementById('date').value;
+      var content = document.getElementById('entry').value;
 
-    // Create a new article element
-    var entry = document.createElement('entry');
-    entry.innerHTML = '<h2 class="date">' + date + '</h2><p>' + content + '</p>';
+      // Create a new article element
+      var entry = document.createElement('entry');
+      entry.innerHTML = '<h2 class="date">' + date + '</h2><p>' + content + '</p>';
 
-    // Add the new article to the blog section
-    document.getElementById('new-entry').appendChild(entry);
+      // Add the new article to the blog section
+      document.getElementById('new-entry').appendChild(entry);
 
-    // Clear form fields
-    document.getElementById('new-entry-form').reset();
-  });
+      // Clear form fields
+      document.getElementById('new-entry-form').reset();
+    });
  </script>
 
 </body>
