@@ -27,27 +27,6 @@ article{
      /* Layout */
      max-width: 300px; /* Maximum card width */
 }
-<div class="container">
-  <div class="row">
-    <div class="column-66">
-      Cookies, Cookies, Cookies
-    </div>
-    <div class="column-33">
-    Cookies, Cookies, Cookies
-    </div>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="column-33">
-    Cookies, Cookies, Cookies
-    </div>
-    <div class="column-66">
-    Cookies, Cookies, Cookies
-    </div>
-  </div>
-</div>
 
 * {
     box-sizing: border-box;
