@@ -52,7 +52,7 @@
 
   <section>
        <form id="new-entry-form">
-           <label for="date">name:</label>
+           <label for="name">name:</label>
            <input type="text" name="date" id="date">
 
            <label for="entry">Whats your favorite?</label>
@@ -62,19 +62,18 @@
        </form>
  </section>
 
- <script>
-        
+ <script>   
       // Function to handle form submission
       document.getElementById('new-entry-form').addEventListener('submit', function(newEntry) {
       newEntry.preventDefault(); // Prevent form submission
 
       // Get user input values
-      var name = document.getElementById('date').value;
-      var content = document.getElementById('entry').value;
+      const name = document.getElementById('name').value;
+      const content = document.getElementById('entry').value;
 
       // Create a new article element
-      var entry = document.createElement('entry');
-      entry.innerHTML = '<h2 class="date">' + date + '</h2><p>' + content + '</p>';
+      const entry = document.createElement('entry');
+      entry.innerHTML = '<h2 class="date">' + name + '</h2><p>' + content + '</p>';
 
       // Add the new article to the blog section
       document.getElementById('new-entry').appendChild(entry);
