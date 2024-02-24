@@ -55,6 +55,18 @@
     </div>
   </div>
 
+  <section>
+    <form id="new-entry-form">
+        <label for="date">name:</label>
+        <input type="text" name="date" id="date">
+
+        <label for="entry">Whats your favorite?</label>
+        <input type="text" name="entry" id="entry">
+
+        <input type="submit" name="submit">
+    </form>
+</section>
+
   <script>
         
     // Function to handle form submission
@@ -62,7 +74,7 @@
     newEntry.preventDefault(); // Prevent form submission
 
     // Get user input values
-    var date = document.getElementById('date').value;
+    var name = document.getElementById('date').value;
     var content = document.getElementById('entry').value;
 
     // Create a new article element
