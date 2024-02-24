@@ -53,12 +53,13 @@
   <section>
        <form id="new-entry-form">
            <label for="name">name:</label>
-           <input type="text" name="date" id="date">
+           <input type="text" name="name" id="name">
 
            <label for="entry">Whats your favorite?</label>
            <input type="text" name="entry" id="entry">
 
            <input type="submit" name="submit">
+           <input type="clear"  name="clear text">
        </form>
  </section>
 
@@ -73,7 +74,7 @@
 
       // Create a new article element
       const entry = document.createElement('entry');
-      entry.innerHTML = '<h2 class="date">' + name + '</h2><p>' + content + '</p>';
+      entry.innerHTML = '<h2 class="name">' + name + '</h2><p>' + content + '</p>';
 
       // Add the new article to the blog section
       document.getElementById('new-entry').appendChild(entry);
