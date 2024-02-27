@@ -77,10 +77,6 @@
 
            <input type="submit" name="submit">
 
-           <br> 
-
-           <button onclick="removeForm()" type="button">Remove Form</button>
-
        </form>
  </section>
 
@@ -101,11 +97,7 @@
       document.getElementById('new-entry').appendChild(entry);
 
       // Clear form fields
-      document.getElementById('new-entry-form').reset();
-
-      // Delete form submission
-      const removeForm(entry) 
-      document.getElementById("new-entry-form").innerHTML = '';
+      document.getElementById('new-entry').reset();
 
     });
  </script>
