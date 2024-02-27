@@ -65,6 +65,10 @@
  
  <section  id="new-entry">
      <!-- Existing blog articles here -->
+
+     <label for="entry"></label> Whoops!</label>
+     <input type="delete" name="Remove Submission">
+
  </section>
 
   <section>
@@ -97,7 +101,7 @@
       document.getElementById('new-entry').appendChild(entry);
 
       // Clear form fields
-      document.getElementById('new-entry').reset();
+      document.getElementById('new-entry').reset(entry);
 
     });
  </script>
