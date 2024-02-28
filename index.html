@@ -81,25 +81,46 @@
   </section>
 
  <script>   
-      // Function to handle form submission
-      document.getElementById('new-entry-form').addEventListener('submit', function(newEntry) {
-      newEntry.preventDefault(); // Prevent form submission
+      document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('new-entry-form');
+    const postsContainer = document.getElementById('posts-container');
 
-      // Get user input values
-      const name = document.getElementById('name').value;
-      const content = document.getElementById('entry').value;
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
 
-      // Create a new article element
-      const entry = document.createElement('entry');
-      entry.innerHTML = '<h2 class="Name">' + name + '</h2><p>' + content + '</p>';
+        const name = document.getElementById('name').value;
+        const entry = document.getElementById('entry').value;
 
-      // Add the new article to the blog section
-      document.getElementById('new-entry').appendChild(entry);
+        const postDiv = document.createElement('div');
+        postDiv.classList.add('post');
 
-      // Clear form fields
-      document.getElementById('new-entry').reset(entry);
+        const postContent = document.createElement('p');
+        postContent.textContent = entry;
 
+        const deleteRadio = document.createElement('input');
+        deleteRadio.type = 'radio';
+        deleteRadio.name = 'delete-post';
+
+        const deleteLabel = document.createElement('label');
+        deleteLabel.appendChild(deleteRadio);
+        deleteLabel.appendChild(document.createTextNode('Delete'));
+
+        postDiv.appendChild(postContent);
+        postDiv.appendChild(deleteLabel);
+
+        postsContainer.appendChild(postDiv);
+
+        // Reset form
+        form.reset();
     });
+
+    // Event delegation for delete functionality
+    postsContainer.addEventListener('click', function(event) {
+        if (event.target.type === 'radio' && event.target.name === 'delete-post') {
+            event.target.closest('.post').remove();
+        }
+    });
+});
  </script>
 
 </body>
