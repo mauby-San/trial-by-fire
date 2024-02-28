@@ -69,6 +69,7 @@
 
  <section>
     <form id="new-entry-form">
+
         <label for="name">Name:</label>
         <input type="text" name="name" id="name" required>
 
@@ -98,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
         postDiv.classList.add('post');
 
         const postContent = document.createElement('p');
-        postContent.textContent = entry; // Set the post content to the user's input
+        postContent.textContent = `${name} says: ${entry}`; // Include the user's name in the post content
 
         const deleteRadio = document.createElement('input');
         deleteRadio.type = 'radio';
