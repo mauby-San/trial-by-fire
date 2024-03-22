@@ -7,11 +7,11 @@ article{
     
 
     /* Spacing */
-    padding: 20px; /* Space inside the card */
+    padding: 40px; /* Space inside the card */
     margin: 20px 0; /* Space outside the card */
 
     /* Layout */
-    max-width: 300px; /* Maximum card width */
+    max-width: 400px; /* Maximum card width */
 
     flex-wrap: wrap; /* positioning */
 
