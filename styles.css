@@ -18,8 +18,10 @@ article{
 }
 
   
-  .container {
+.container {
     padding: 64px;
+    margin-right: 40px;
+    max-width: fit-content;
   }
   
   
