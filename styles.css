@@ -6,7 +6,7 @@ article{
     border-radius: 8px; /* Rounded corners */
     display: flex;
     flex-wrap: wrap;
-    
+
     /* Spacing */
     padding: 20px; /* Space inside the card */
     margin: 20px 0; /* Space outside the card */
@@ -48,4 +48,8 @@ article{
       width: 100%;
       text-align: center;
     }
+  }
+  
+  img:hover{
+    transform: scale(1.4);
   }
