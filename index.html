@@ -68,8 +68,12 @@
  </section> -->
 
  <section>
-    <form id="new-entry-form">
 
+    <form id="new-entry-form">
+        <article id="posts-container">
+          <!-- Posts will be dynamically added here -->
+        </article>
+        
         <label for="name">Name:</label>
         <input type="text" name="name" id="name" required>
 
@@ -79,9 +83,7 @@
         <input type="submit" name="submit">
     </form>
 
-    <article id="posts-container">
-        <!-- Posts will be dynamically added here -->
-    </article>
+   
  </section>
 
  <script>   
