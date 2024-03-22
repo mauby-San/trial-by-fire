@@ -4,7 +4,9 @@ article{
     border: 1px solid #b37c06; /* Border around the card */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow to create a lifted card effect */
     border-radius: 8px; /* Rounded corners */
-
+    display: flex;
+    flex-wrap: wrap;
+    
     /* Spacing */
     padding: 20px; /* Space inside the card */
     margin: 20px 0; /* Space outside the card */
