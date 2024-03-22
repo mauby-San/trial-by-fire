@@ -13,9 +13,8 @@ article{
     /* Layout */
     max-width: 300px; /* Maximum card width */
 
-    /* card placement */
-    display: flex; /
-    flex-wrap: wrap; 
+    flex-wrap: wrap; /* positioning */
+
 }
 
   
