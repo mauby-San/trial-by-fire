@@ -84,16 +84,17 @@
       </form> 
  </section>
 
-   <div class="footer" id="myFooter">
-        <p>Copyright &copy; <span id="year"></span> Cooki3z</p>
-   </div>
-
     <details>
      <h4>Background Manipulation </h4>
      <p>Click the "Change Background" button to change the background color of this webpage.</p>
     </details>
+
       <!-- Button -->
-    <button class="changeBgButton" onclick="changeBackground(any.backgroundColor)">Change Background</button>
+    <button class="changeBgButton" onclick="changeBackground(any)">Change Background</button>
+
+   <div class="footer" id="myFooter">
+        <p>Copyright &copy; <span id="year"></span> Cooki3z</p>
+   </div>
 
  <script>   
         document.addEventListener('DOMContentLoaded', function() {
@@ -143,7 +144,7 @@
         function changeBackground(any) {
             const colors = ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#ff00ff", "#00ffff"];
             const randomColor = colors[Math.floor(Math.random() * colors.length)];
-            document.getElementById("body").style.backgroundColor = randomColor;
+            document.getElementById("background").style.backgroundColor = randomColor;
         }
 
       });
