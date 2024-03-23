@@ -87,12 +87,16 @@
    
  </section>
 
- <script>   
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('new-entry-form');
-    const postsContainer = document.getElementById('posts-container');
+   <div class="footer" id="myFooter">
+         <p>Copyright &copy; <span id="year"></span> Cookies</p>
+   </div>
 
-    form.addEventListener('submit', function(event) {
+ <script>   
+     document.addEventListener('DOMContentLoaded', function() {
+       const form = document.getElementById('new-entry-form');
+       const postsContainer = document.getElementById('posts-container');
+
+     form.addEventListener('submit', function(event) {
         event.preventDefault();
 
         const name = document.getElementById('name').value;
@@ -119,16 +123,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Reset form
         form.reset();
-    });
+     });
 
      // Event delegation for delete functionality
-   postsContainer.addEventListener('click', function(event) {
+     postsContainer.addEventListener('click', function(event) {
         if (event.target.type === 'radio' && event.target.name === 'delete-post') {
             event.target.closest('.post').remove();
         }
-    });
-});
- </script>
+     });
+
+      // JavaScript to get the current year
+      document.getElementById("year").innerHTML = new Date().getFullYear();
+      });
+
+    </script>
 
   
 </body>
