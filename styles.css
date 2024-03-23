@@ -39,6 +39,25 @@ article{
     flex-wrap: wrap;
   }
 
+  /* CSS for the body */
+  body {
+    padding: 30px;
+    font-family: Arial, sans-serif;
+}
+
+/* CSS for the button */
+.changeBgButton {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.changeBgButton:hover {
+    background-color: #0056b3;
+}
+
   /* CSS for the footer */
   .footer {
     position: static;

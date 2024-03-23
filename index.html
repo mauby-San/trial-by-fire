@@ -21,7 +21,7 @@
 
 <title>Cookies</title>
 
-<body style="background-color:rgb(32, 184, 204);">
+<body id="body" style="background-color:rgb(32, 184, 204);">
 
     <h1> 
        Desserts world
@@ -69,8 +69,7 @@
  </section> -->
 
  <section>
-
-    <form id="new-entry-form">
+      <form id="new-entry-form">
         <article id="posts-container">
           <!-- Posts will be dynamically added here -->
         </article>
@@ -82,14 +81,18 @@
         <input type="text" name="entry" id="entry">
 
         <input type="submit" name="submit">
-    </form>
-
-   
+      </form> 
  </section>
 
    <div class="footer" id="myFooter">
          <p>Copyright &copy; <span id="year"></span> Cooki3z</p>
    </div>
+
+    <h4>Background Manipulation Example</h4>
+      <p>Click the "Change Background" button to change the background color of this webpage.</p>
+
+      <!-- Button -->
+    <button class="changeBgButton" onclick="changeBackground()">Change Background</button>
 
  <script>   
      document.addEventListener('DOMContentLoaded', function() {
@@ -134,6 +137,14 @@
 
       // JavaScript to get the current year
       document.getElementById("year").innerHTML = new Date().getFullYear();
+
+      // JavaScript to change the background color
+      function changeBackground() {
+            var colors = ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#ff00ff", "#00ffff"];
+            var randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.getElementById("body").style.backgroundColor = randomColor;
+        }
+        
       });
 
     </script>
