@@ -41,7 +41,7 @@ article{
 
   /* CSS for the body */
   body {
-    padding: 30px;
+    padding: 10px;
     font-family: Arial, sans-serif;
 }
 
@@ -68,8 +68,4 @@ article{
     color: black;
     text-align: center;
     padding: 5px;
-  }
-
-  body{
-    padding-bottom: 10%;
   }

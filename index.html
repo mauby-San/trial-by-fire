@@ -92,14 +92,14 @@
       <p>Click the "Change Background" button to change the background color of this webpage.</p>
 
       <!-- Button -->
-    <button class="changeBgButton" onclick="changeBackground()">Change Background</button>
+    <button class="changeBgButton" onclick="changeBackground(randomColor)">Change Background</button>
 
  <script>   
-     document.addEventListener('DOMContentLoaded', function() {
-       const form = document.getElementById('new-entry-form');
-       const postsContainer = document.getElementById('posts-container');
+        document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('new-entry-form');
+        const postsContainer = document.getElementById('posts-container');
 
-     form.addEventListener('submit', function(event) {
+        form.addEventListener('submit', function(event) {
         event.preventDefault();
 
         const name = document.getElementById('name').value;
@@ -128,20 +128,20 @@
         form.reset();
      });
 
-     // Event delegation for delete functionality
-     postsContainer.addEventListener('click', function(event) {
+        // Event delegation for delete functionality
+        postsContainer.addEventListener('click', function(event) {
         if (event.target.type === 'radio' && event.target.name === 'delete-post') {
             event.target.closest('.post').remove();
         }
      });
 
-      // JavaScript to get the current year
-      document.getElementById("year").innerHTML = new Date().getFullYear();
+        // JavaScript to get the current year
+        document.getElementById("year").innerHTML = new Date().getFullYear();
 
-      // JavaScript to change the background color
-      function changeBackground(changeBgButton) {
-            var colors = ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#ff00ff", "#00ffff"];
-            var randomColor = colors[Math.floor(Math.random() * colors.length)];
+        // JavaScript to change the background color
+        function changeBackground(changeBgButton) {
+            const colors = ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#ff00ff", "#00ffff"];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
             document.getElementById("body").style.backgroundColor = randomColor;
         }
 
