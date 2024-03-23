@@ -48,5 +48,9 @@ article{
     background-color: #b37c06;
     color: black;
     text-align: center;
-    padding-bottom: 25px;
+    padding: 5px;
+  }
+
+  body{
+    padding-bottom: 40%;
   }
