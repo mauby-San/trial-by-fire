@@ -24,29 +24,29 @@
 <body id="body">
 
     <h1> 
-       Desserts world
+      Desserts world
     </h1>
 
     <p style="font-size: large; font-weight: bold;"> 
-       Cookies, Cookies,Cookies,Cookies! 
+      Cookies, Cookies,Cookies,Cookies! 
    </p> 
 
   <div>
-     <aside>
-          <img src="https://th.bing.com/th/id/OIG3.4lkpSKes0ld59u.fYPdk?w=1024&h=1024&rs=1&pid=ImgDetMain" alt="MILK" width="626" height="417">
-          <img src="https://th.bing.com/th/id/OIG1.K6jeVB.ZtGWmo7GcEYgz?pid=ImgGn" alt="MILK" width="626" height="417">
-     </aside>
+    <aside>
+      <img src="https://th.bing.com/th/id/OIG3.4lkpSKes0ld59u.fYPdk?w=1024&h=1024&rs=1&pid=ImgDetMain" alt="MILK" width="626" height="417">
+      <img src="https://th.bing.com/th/id/OIG1.K6jeVB.ZtGWmo7GcEYgz?pid=ImgGn" alt="MILK" width="626" height="417">
+    </aside>
   </div>
 
  <h2>Cookie Facts</h2>
 
   <article>
-     <h2>Cookies are Important to Humanity!</h2>
-     <ol>
-       <li>Reason 1: Tastes great</li>
-       <li>Reason 2: Refuels Santa Claus</li>
-       <li>Reason 3: Food preservation</li>
-     </ol>
+    <h2>Cookies are Important to Humanity!</h2>
+    <ol>
+      <li>Reason 1: Tastes great</li>
+      <li>Reason 2: Refuels Santa Claus</li>
+      <li>Reason 3: Food preservation</li>
+    </ol>
   </article>
 
     <p style="font-size: large; font-weight: bold;"> 
@@ -54,81 +54,81 @@
     </p> 
 
  <article>
-     <h2>Cookies are not Important to Humanity!</h2>
-        <ol>
-             <li>Reason 1: Contributes to cavities</li>
-             <li>Reason 2: Sewing tools needle kits</li>
-             <li>Reason 3: Cookie Monster is out of work</li>
-        </ol>
+    <h2>Cookies are not Important to Humanity!</h2>
+    <ol>
+      <li>Reason 1: Contributes to cavities</li>
+      <li>Reason 2: Sewing tools needle kits</li>
+      <li>Reason 3: Cookie Monster is out of work</li>
+    </ol>
  </article>
 
  <h3>Submit your favorite cookie!</h3>
- 
  <!-- <section  id="new-entry">
       
  </section> -->
-
  <section style="padding-bottom: 10px;">
-      <form id="new-entry-form">
-        <article id="posts-container">
-          <!-- Posts will be dynamically added here -->
-        </article>
-        
-        <label for="name">Name:</label>
-        <input type="text" name="name" id="name" required>
+    <form id="new-entry-form">
+      <article id="posts-container">
+        <!-- Posts will be dynamically added here -->
+      </article>
+      
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" required>
 
-        <label for="entry">What's your favorite?</label>
-        <input type="text" name="entry" id="entry">
+      <label for="entry">What's your favorite?</label>
+      <input type="text" name="entry" id="entry">
 
-        <input type="submit" name="submit">
-      </form> 
+      <input type="submit" name="submit">
+    </form> 
  </section>
 
-    <details>
-     <h4>Background Manipulation </h4>
-     <p>Click the "Change Background" button to change the background color of this webpage.</p>
-    </details>
+  <details>
+    <h4>Background Manipulation </h4>
+    <p>Click the "Change Background" button to change the background color of this webpage.</p>
+  </details>
 
-      <!-- Button -->
-    <button class="changeBgButton" onclick="changeBackground()">Change Background</button>
+  <!-- Button -->
+  <button class="changeBgButton" onclick="changeBackground()">
+    Change Background
+  </button>
 
-   <div class="footer" id="myFooter">
-        <p>Copyright &copy; <span id="year"></span> Cooki3z</p>
-   </div>
+  <div class="footer" id="myFooter">
+    <p>Copyright &copy; <span id="year"></span> Cooki3z</p>
+  </div>
 
  <script>   
-        document.addEventListener('DOMContentLoaded', function() {
-        const form = document.getElementById('new-entry-form');
-        const postsContainer = document.getElementById('posts-container');
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('new-entry-form');
+      const postsContainer = document.getElementById('posts-container');
 
-        form.addEventListener('submit', function(event) {
-        event.preventDefault();
+      form.addEventListener('submit', function(event) {
+      event.preventDefault();
 
-        const name = document.getElementById('name').value;
-        const entry = document.getElementById('entry').value;
+      const name = document.getElementById('name').value;
+      const entry = document.getElementById('entry').value;
 
-        const postDiv = document.createElement('div');
-        postDiv.classList.add('post');
+      const postDiv = document.createElement('div');
+      postDiv.classList.add('post');
 
-        const postContent = document.createElement('p');
-        postContent.textContent = `${name} says: ${entry}`; // Include the user's name in the post content
+      const postContent = document.createElement('p');
+      postContent.textContent = `${name} says: ${entry}`; // Include the user's name in the post content
 
-        const deleteRadio = document.createElement('input');
-        deleteRadio.type = 'radio';
-        deleteRadio.name = 'delete-post';
+      const deleteRadio = document.createElement('input');
+      deleteRadio.type = 'radio';
+      deleteRadio.name = 'delete-post';
 
-        const deleteLabel = document.createElement('label');
-        deleteLabel.appendChild(deleteRadio);
-        deleteLabel.appendChild(document.createTextNode('Delete'));
+      const deleteLabel = document.createElement('label');
+      deleteLabel.appendChild(deleteRadio);
+      deleteLabel.appendChild(document.createTextNode('Delete'));
 
-        postDiv.appendChild(postContent);
-        postDiv.appendChild(deleteLabel);
+      postDiv.appendChild(postContent);
+      postDiv.appendChild(deleteLabel);
 
-        postsContainer.appendChild(postDiv);
+      postsContainer.appendChild(postDiv);
 
-        // Reset form
-        form.reset();
-     });
+      // Reset form
+      form.reset();
+      });
 
       // Event delegation for delete functionality
       postsContainer.addEventListener('click', function(event) {
@@ -136,16 +136,16 @@
           event.target.closest('.post').remove();
         }
       });
-
-      // JavaScript to get the current year
-      document.getElementById("year").innerHTML = new Date().getFullYear();
-
-      // JavaScript to change the background color
-      function changeBackground() {
-      var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
-      document.body.style.backgroundColor = randomColor;
-      }
     });
+
+    // JavaScript to get the current year
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+
+    // JavaScript to change the background color
+    function changeBackground() {
+    var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    document.body.style.backgroundColor = randomColor;
+    }
   </script>
 </body>
 </html>
