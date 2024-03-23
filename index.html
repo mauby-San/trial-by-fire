@@ -143,16 +143,20 @@
         document.getElementById("year").innerHTML = new Date().getFullYear();
 
         // JavaScript to change the background color
-        function changeBackground() {
-            document.body.style.backgroundColor = "any"; // Change to any color you like
-            var colors = ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#ff00ff", "#00ffff"];
-            var randomColor = colors[Math.floor(Math.random() * colors.length)];
-          document.getElementById("colors").style.backgroundColor = randomcolour;
+    function changeBackground() {
+            var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = randomColor;
         }
+        //function changeBackground() {
+           // document.body.style.backgroundColor = ; // Change to any color you like
+           // var colors = ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#ff00ff", "#00ffff"];
+           // var randomColor = colors[Math.floor(Math.random() * colors.length)];
+          // document.getElementById("colors").style.backgroundColor = randomcolour;
+        // }
 
       });
 
-    </script>
+  </script>
 
   
 </body>
