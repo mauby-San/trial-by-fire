@@ -90,7 +90,9 @@
     </details>
 
       <!-- Button -->
-    <button class="changeBgButton" onclick="changeBackground()">Change Background</button>
+    <button class="changeBgButton" onclick="changeBackground()">
+        Change Background
+    </button>
 
    <div class="footer" id="myFooter">
         <p>Copyright &copy; <span id="year"></span> Cooki3z</p>
@@ -143,8 +145,8 @@
         // JavaScript to change the background color
         function changeBackground() {
             var colors = ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#ff00ff", "#00ffff"];
-            const randomColor = colors[Math.floor(Math.random() * colors.length)];
-            document.getElementById("body").style.backgroundColor = randomcolour ;
+            var randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.getElementById("colors").style.backgroundColor = randomcolour;
         }
 
       });
