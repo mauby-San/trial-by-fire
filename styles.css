@@ -40,11 +40,10 @@
   }
 
   /* CSS for the body */
-  body {
+ .body {
     padding: 10px;
     font-family: Arial, sans-serif;
     background-color: antiquewhite;
-    enable-background: var(changeBgButton);
   }
 
  /* CSS for the button */
