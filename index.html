@@ -144,9 +144,10 @@
 
         // JavaScript to change the background color
         function changeBackground() {
+            document.body.style.backgroundColor = "any"; // Change to any color you like
             var colors = ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#ff00ff", "#00ffff"];
             var randomColor = colors[Math.floor(Math.random() * colors.length)];
-            document.getElementById("colors").style.backgroundColor = randomcolour;
+          document.getElementById("colors").style.backgroundColor = randomcolour;
         }
 
       });
