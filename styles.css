@@ -43,6 +43,8 @@ article{
   body {
     padding: 10px;
     font-family: Arial, sans-serif;
+    background-color: antiquewhite;
+    enable-background: var(.changeBgButton);
 }
 
 /* CSS for the button */
@@ -50,7 +52,7 @@ article{
     padding: 10px 20px;
     background-color: #007BFF;
     color: white;
-    border: none;
+    border: 10px;
     cursor: pointer;
 }
 
